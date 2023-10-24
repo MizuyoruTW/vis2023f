@@ -90,16 +90,11 @@
                 grade = Math.floor(Math.random() * 2) + 111;
                 depart = Object.keys(depart_mapping)[Math.floor(Math.random() * Object.keys(depart_mapping).length)];
                 id = grade.toString() + depart + Math.floor(Math.random() * 999).toString().padStart(3, '0');
-                console.log(ids.includes(id))
             } while (ids.includes(id))
             a3[i][2] = id;
             ids.push(id)
             a3[i][1] = depart_mapping[depart];
-            if (depart == "590") {
-                a3[i][1] += grade == 111 ? "四" : "三";
-            } else {
-                a3[i][1] += grade == 111 ? "二" : "一";
-            }
+            a3[i][1] += grade == 111 ? "二" : "一";
             //a3[i][1] = '路人甲'; // 4E00-9FFF
             //a3[i][1] = String.fromCharCode(0x6771);
             a3[i][3] = String.fromCharCode(Math.floor(Math.random() * 0x51ff + 0x4e00)) +
