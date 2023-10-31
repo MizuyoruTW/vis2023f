@@ -1,0 +1,14 @@
+{
+  "name": "4d68cb03afaba599",
+  "main": "4d68cb03afaba599@18.js",
+  "version": "18.0.0",
+  "homepage": "https://observablehq.com/d/4d68cb03afaba599",
+  "author": {
+    "name": "CCC's Workspace",
+    "url": "https://observablehq.com/@ccc2-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
