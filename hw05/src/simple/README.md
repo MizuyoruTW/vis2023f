@@ -1,6 +1,6 @@
 # Simple baseLine (呈現小組 1pt, 可拖拉 1pt, 放入個人圖片 1pt)
 
-https://observablehq.com/d/2f53ae94b1a1bf71@703
+https://observablehq.com/d/2f53ae94b1a1bf71@707
 
 View this notebook in your browser by running a web server in this folder. For
 example:
@@ -14,7 +14,7 @@ import this module directly into your application. To npm install:
 
 ~~~sh
 npm install @observablehq/runtime@5
-npm install https://api.observablehq.com/d/2f53ae94b1a1bf71@703.tgz?v=3
+npm install https://api.observablehq.com/d/2f53ae94b1a1bf71@707.tgz?v=3
 ~~~
 
 Then, import your notebook and the runtime as:

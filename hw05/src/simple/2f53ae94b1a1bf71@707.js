@@ -7,8 +7,8 @@ function _1(md) {
 
 function _simple(d3, data, drag, invalidation) {
   // 指定圖表的尺寸。
-  const width = 500;
-  const height = 400;
+  const width = 1000;
+  const height = 800;
 
   // 計算圖形並啟動力模擬。
   const root = d3.hierarchy(data);
@@ -97,15 +97,9 @@ function _simple(d3, data, drag, invalidation) {
 }
 
 
-function _data_obj(FileAttachment) {
+function _data(FileAttachment) {
   return (
     FileAttachment("output.json").json()
-  )
-}
-
-function _data(data_obj) {
-  return (
-    data_obj.children[10]
   )
 }
 
@@ -147,8 +141,7 @@ export default function define(runtime, observer) {
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
   main.variable(observer("simple")).define("simple", ["d3", "data", "drag", "invalidation"], _simple);
-  main.variable(observer("data_obj")).define("data_obj", ["FileAttachment"], _data_obj);
-  main.variable(observer("data")).define("data", ["data_obj"], _data);
+  main.variable(observer("data")).define("data", ["FileAttachment"], _data);
   main.variable(observer("drag")).define("drag", ["d3"], _drag);
   return main;
 }
